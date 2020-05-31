@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="{{tabIndex == 1 ? 'on' : ''}}" data-id="1" bindtap="changeTap">全部</view>
+    <view class="{{tabIndex == 2 ? 'on' : ''}}" data-id="2" bindtap="changeTap">进行中</view>
+    <view class="{{tabIndex == 3 ? 'on' : ''}}" data-id="3" bindtap="changeTap">已完成</view>
+    <view class="{{tabIndex == 4 ? 'on' : ''}}" data-id="4" bindtap="changeTap">已取消/失败</view>
+  </view>
+  <view class="list-view" wx:if="{{tabIndex == 1}}">
+    <view class="list pt" wx:for="{{orderList}}">
+      <view class="catgre">预约{{item.type}}-{{item.type}}{{item.tempId}}</view>
+      <view>提交时间： {{item.createtime}}</view>
+      <view>活动时间： {{item.begintime}}</view>
+      <view>预约状态： {{item.statename}}</view>
+      <view wx:if="{{item.state == 'padding' || item.state == 'comfirm'}}" >
+        <view class="cancel" data-id="{{item.id}}" bindtap="handleCancel">取消该活动</view>
+      </view>
+    </view>
+    <view class="isnull pt" wx:if="{{orderList.length == 0}}">
+      <image src="../../static/img/none.png" />
+    </view>
+  </view>
+  <view class="list-view" wx:if="{{tabIndex == 2}}">
+    <view class="list pt" wx:for="{{orderList1}}">
+      <view class="catgre">预约{{item.type}}-{{item.type}}{{item.tempId}}</view>
+      <view>提交时间： {{item.createtime}}</view>
+      <view>活动时间： {{item.begintime}}</view>
+      <view>预约状态： {{item.statename}}</view>
+      <view wx:if="{{item.state == 'padding' || item.state == 'comfirm'}}" >
+        <view class="cancel" data-id="{{item.id}}" bindtap="handleCancel">取消该活动</view>
+      </view>
+    </view>
+    <view class="isnull pt" wx:if="{{orderList1.length == 0}}">
+      <image src="../../static/img/none.png" />
+    </view>
+  </view>
+  <view class="list-view" wx:if="{{tabIndex == 3}}">
+    <view class="list pt" wx:for="{{orderList2}}">
+      <view class="catgre">预约{{item.type}}-{{item.type}}{{item.tempId}}</view>
+      <view>提交时间： {{item.createtime}}</view>
+      <view>活动时间： {{item.begintime}}</view>
+      <view>预约状态： {{item.statename}}</view>
+      <view wx:if="{{item.state == 'padding' || item.state == 'comfirm'}}" >
+        <view class="cancel"data-id="{{item.id}}" bindtap="handleCancel">取消该活动</view>
+      </view>
+    </view>
+    <view class="isnull pt" wx:if="{{orderList2.length == 0}}">
+      <image src="../../static/img/none.png" />
+    </view>
+  </view>
+  <view class="list-view" wx:if="{{tabIndex == 4}}">
+    <view class="list pt" wx:for="{{orderList3}}">
+      <view class="catgre">预约{{item.type}}-{{item.type}}{{item.tempId}}</view>
+      <view>提交时间： {{item.createtime}}</view>
+      <view>活动时间： {{item.begintime}}</view>
+      <view>预约状态： {{item.statename}}</view>
+      <view wx:if="{{item.state == 'padding' || item.state == 'comfirm'}}" >
+        <view class="cancel" data-id="{{item.id}}" bindtap="handleCancel">取消该活动</view>
+      </view>
+    </view>
+    <view class="isnull pt" wx:if="{{orderList3.length == 0}}">
+      <image src="../../static/img/none.png" />
+    </view>
+  </view>
+</view>

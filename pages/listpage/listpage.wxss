@@ -1,0 +1,40 @@
+.list {
+  background: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.list image {
+  width: 690rpx;
+  height: 350rpx;
+}
+.moreHeight {
+  height: 400rpx !important;
+}
+.list .con {
+  display: flex;
+  width: 690rpx;
+  padding: 20rpx 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.list .item:not(:first-child) {
+  margin-top: 30rpx;
+}
+.list .item:not(:last-child) {
+  border-bottom: 1rpx solid #eaeaea;
+}
+
+.con .have {
+  color: #666;
+  font-size: 24rpx;
+  display: inline-block;
+}
+.con .button{
+  color: #fff;
+  width: 200rpx;
+  height: 64rpx;
+  background: #333333;
+  line-height: 62rpx;
+  text-align: center;
+  border-radius: 32rpx;
+}

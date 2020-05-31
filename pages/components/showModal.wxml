@@ -1,0 +1,17 @@
+<view class='warp' style="background-color:{{transparent==false?'rgba(0,0,0,0.7)':'rgba(0,0,0,0)'}};" wx:if='{{showModal==true}}'>
+  <view class='mask_one' data-pan='0'  bindtap="{{pageNoBind==false?'colse':''}}"></view>
+  <view class='bubble' direction="all">
+            <view class='tishi'>{{title}}</view>
+            <scroll-view scroll-y  class='bubble_one'>
+              {{content}}
+              <slot></slot>
+             </scroll-view >
+            <view class='border'></view>
+            <view class='bFooter'>
+                <view wx:if='{{showNoCancel==false}}' data-pan='1'  bindtap='colse' class='bFooter_z1'>取消</view>
+                <view wx:if='{{showNoCancel==false}}' class='bFooter_z_B'></view>
+                <view wx:if='{{showNoCancel==false}}' data-pan='2'   bindtap='colse' class='bFooter_z2'>确定</view>
+                 <view wx:if='{{showNoCancel==true}}' data-pan='2'  bindtap='colse' class='bFooter_z'>确定</view>
+            </view>
+  </view>
+</view>

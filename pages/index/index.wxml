@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top-area section">
+    <image src="../../static/img/icon.jpg" mode="aspectFill" class="banner" />
+    <image src="../../static/img/run.jpg" class="icon" />
+    <view>免费健身预约</view>
+  </view>
+  <view class="scroll section mt">
+    <image src="../../static/img/gb.png" class="gb" />
+    <swiper
+      autoplay="true"
+      circular="true"
+      >
+      <swiper-item 
+        wx:for="{{scrollText}}"
+        wx:key="i"
+        >
+        {{item}}</swiper-item>
+    </swiper>
+  </view>
+  <view class="type section mt">
+    <view data-type="电影" bindtap="redirectTo">
+      <image src="../../static/img/dy.png" mode="scaleToFill" />
+      <view>看电影</view>
+    </view>
+    <view data-type="健身" bindtap="redirectTo">
+      <image src="../../static/img/js.png" mode="scaleToFill" />
+      <view>去健身</view>
+    </view>
+    <view data-type="台球" bindtap="redirectTo">
+      <image src="../../static/img/zq.png" mode="scaleToFill" />
+      <view>打台球</view>
+    </view>
+  </view>
+</view>

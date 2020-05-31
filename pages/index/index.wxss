@@ -1,0 +1,54 @@
+/**index.wxss**/
+.top-area {
+  position: relative;
+}
+.top-area .banner{
+  width: 750rpx;
+}
+.top-area .icon {
+  position: relative;
+  left: 50%;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-top: -65rpx;
+  transform: translate(-50%);
+}
+.top-area  view {
+  text-align: center;
+  margin: 40rpx 0 40rpx 0;
+}
+.type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 40rpx 0;
+}
+.type image {
+ width: 80rpx;
+ height: 80rpx;
+}
+.type view {
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.scroll swiper {
+  width: 710rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+}
+swiper-item {
+  line-height: 80rpx;
+}
+.scroll {
+  display: flex;
+  width: 750rpx;
+  align-items: center;
+}
+.scroll .gb {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+}

@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">{{type=='dy' ? '电影预约' : '健身预约'}}</view>
+
+  <view class="qicai mt">
+    <view class="pb mb bb1" wx:if="{{type!='电影'}}">
+      <view class="st">请选择器材</view>
+      <picker bindchange="bindPickerChange" data-id="pickerValue" model:value="{{pickerValue}}" range="{{selectType}}">
+        <view class="picker"  wx:if="{{pickerValue !== ''}}">
+          <view>{{selectType[pickerValue]}}</view>
+          <image src="../../static/img/arrow-right.png" class="arrow" />
+        </view>
+      </picker>
+    </view>
+    <view>
+      <view class="st ">预约时间段</view>
+      <picker bindchange="bindPickerChange" data-id="pickerValue1" model:value="{{pickerValue1}}" range="{{movieList}}" wx:if="{{type=='电影'}}">
+        <view class="picker"  wx:if="{{pickerValue1 !== ''}}">
+          <view>{{movieList[pickerValue1]}}</view>
+          <image src="../../static/img/arrow-right.png" class="arrow" />
+        </view>
+      </picker>
+      <picker bindchange="bindPickerChange" data-id="pickerValue1" model:value="{{pickerValue1}}" range="{{timeList}}" wx:else>
+        <view class="picker"  wx:if="{{pickerValue1 !== ''}}">
+          <view>{{timeList[pickerValue1]}}</view>
+          <image src="../../static/img/arrow-right.png" class="arrow" />
+        </view>
+      </picker>
+      </view>
+  </view>
+
+  <view class="form mt">
+    <view>姓名</view>
+    <input type="text"  model:value="{{userinfo.name}}" data-id="name" bindchange="changevalue" placeholder="请输入姓名"/>
+  </view>
+  <view class="form">
+    <view>工号</view>
+    <input type="text" value="{{userinfo.jobnumber}}" data-id="jobnumber" bindchange="changevalue" placeholder="请输入工号"/>
+  </view>
+  <view class="form">
+    <view>部门</view>
+    <input type="text"  model:value="{{userinfo.department}}" data-id="department" bindchange="changevalue" placeholder="请输入所以部门"/>
+  </view>
+  <view class="form">
+    <view>手机号</view>
+    <input type="text"  model:value="{{userinfo.mobile}}" data-id="mobile" bindchange="changevalue" placeholder="请输入手机号"/>
+  </view>
+
+  <view class="info mt">
+    温馨提示： 请提前一天预约当天的活动
+  </view>
+
+  <view class="promise">
+    <checkbox model:checked="{{isagree}}"></checkbox>
+    <view>
+      <view class="read" bindtap="handleRead">请阅读并同意</view>
+      <view class="tip" bindtap="handleShowTip">《安全告知》</view>
+    </view>
+  </view>
+  <showLoading showModal='{{showModal}}' title='{{modalTitle}}' showNoCancel='{{true}}'>
+    <view>1、严格遵守健身房各项注意事项，科学安全谨慎使用；</view>
+    <view>2、本人身体健康，无不适合剧烈运动的疾病；</view>
+    <view>3、进入健身场所，做好个人防护和运动安全；</view>
+    <view>4、本人已知健身房属于公司公益使用，本人在健身房出现任何防护问题或受伤等一切不利后果均由本人承担一切责任。</view>
+ </showLoading>
+  <view class="button" bindtap="handleSubmit">立即预约</view>
+</view>

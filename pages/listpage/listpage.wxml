@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="list mt">
+    <view class="item">
+      <image src="../../static/img/movie.jpg" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          电影预约 
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="电影" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+    <view class="item">
+      <image src="../../static/img/list_pb.jpg" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          跑步机预约
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="跑步机" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+    <view class="item">
+      <image src="../../static/img/list_zx.jpg" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          自行车预约
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="自行车" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+    <view class="item">
+      <image src="../../static/img/temp.jpg" class="moreHeight" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          桌球预约
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="桌球" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+    <view class="item">
+      <image src="../../static/img/list_fb.jpg" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          腹部肌肉训练
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="腹部肌肉训练器" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+    <view class="item">
+      <image src="../../static/img/list_pp.jpg" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          乒乓球
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="乒乓球" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+    <view class="item">
+      <image src="../../static/img/list_zh.jpg" class="moreHeight" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          综合训练器材
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="综合训练器材" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+    <view class="item">
+      <image src="../../static/img/list_ty.jpg" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          椭圆机预约
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="椭圆机" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+    <view class="item">
+      <image src="../../static/img/list_yl.jpg" mode="scaleToFill" />
+      <view class="con">
+        <view class="type">
+          哑铃预约
+          <view class="have">已预约  12/40</view>
+        </view>
+        <view class="button" data-id="哑铃" bindtap="handleClick">立即预约</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,81 @@
+.container {
+  width: 750rpx;
+  background: #fff;
+  box-sizing: border-box;
+  padding-top: 110rpx;
+}
+
+.title {
+  display: flex;
+  width: 690rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  padding: 30rpx 30rpx 0 30rpx;
+}
+.title .on {
+  position: relative;
+}
+.title view {
+  flex: 1;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.title view:last-child{
+  flex: 1.5;
+}
+.pt {
+  border-top: 20rpx solid #eaeaea;
+}
+.title .on::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2rpx;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background: #666;
+}
+.list {
+  width: 690rpx;
+  padding: 30rpx;
+  position: relative;
+}
+.list > view {
+  padding: 10rpx 0;
+}
+.list > view:first-child {
+  padding: 20rpx 0;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid #eaeaea;
+}
+.list > view:not(:first-child) {
+  color: #666;
+  font-size: 26rpx;
+}
+.cancel {
+  color: #fff;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  margin-top: -20rpx;
+  background: #07c160;
+  position: absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+}
+.isnull {
+  height: 88vh;
+  width: 690rpx;
+  padding: 0 30rpx;
+}
+.isnull image {
+  width: 448rpx;
+  height: 568rpx;
+  display: block;
+  margin: 120rpx auto 0 auto;
+}

@@ -1,0 +1,126 @@
+.warp{
+  position:fixed;
+  z-index: 999999999;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  width: 100vw;
+}
+.allow{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.mask_one{
+  position: absolute;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.bubble{
+  margin-top: -70rpx;
+  position: relative;
+  width: 590rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 4rpx 12rpx 0rpx rgba(205,164,61,0.36);
+  border-radius:10rpx;
+  z-index: 9;
+}
+.logo{
+  width: 83rpx;
+  height: 90rpx;
+  margin: 53rpx 0 0 199rpx;
+}
+.bubble_one{
+  width: calc(100% - 60rpx);
+  max-height:400rpx;
+  margin: 0 auto;
+  font-size:28rpx;
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(156,156,156,1);
+  line-height: 1.5;
+  overflow-y:hidden;
+}
+
+
+.tishi{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.border{
+  width:460rpx;
+  height:2rpx;
+  background:rgba(255,227,194,1);
+  margin: 25rpx auto 0 auto;
+}
+.bFooter{
+  width: 100%;
+  height: 84rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.bFooter_z1{
+  position: relative;
+  height: 100%;
+  width: 49%;
+  font-size:26rpx;
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(255,228,209,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bFooter_z_B{
+  width:1rpx;
+  height:40rpx;
+  background:rgba(255,227,194,1);
+}
+.bFooter_z2{
+  position: relative;
+  height: 100%;
+  width: 49%;
+  font-size:26rpx;
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(247,150,82,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bFooter_z{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size:26rpx;
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(247,150,82,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.colse{
+  position: absolute;
+  width: 59rpx;
+  height: 59rpx;
+  right: -12rpx;
+  top: -12rpx;
+}

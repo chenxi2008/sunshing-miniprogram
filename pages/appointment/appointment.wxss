@@ -1,0 +1,94 @@
+.title {
+  line-height: 80rpx;
+  height: 80rpx;
+  background: #fff;
+  width: 750rpx;
+  text-indent: 30rpx;
+}
+.form {
+  width: 750rpx;
+  background: #fff;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eaeaea;
+}
+.form view {
+  font-size: 26rpx;
+}
+.form view::before {
+  content: "*";
+  display: inline-block;
+  color: red;
+}
+.form input {
+  margin-top: 20rpx;
+}
+.promise {
+  width: 690rpx;
+  margin: 30rpx;
+}
+.promise view {
+  display: inline-block;
+  color: #666;
+}
+.button {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-top: 100rpx;
+}
+.info {
+  width: 690rpx;
+  padding: 30rpx;
+  color: #666;
+  font-size: 26rpx;
+  background: #fff;
+}
+.qicai {
+  padding: 30rpx;
+  width: 690rpx;
+  color: #333;
+  font-size: 28rpx;
+  background: #fff;
+}
+
+.qicai .picker image {
+  width: 18rpx;
+  height: 30rpx;
+}
+picker {
+  margin-top: 20rpx;
+}
+.picker {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.st {
+  font-size: 26rpx;
+}
+.st::before {
+  content: "*";
+  display: inline-block;
+  color: red;
+}
+.mb {
+  margin-bottom: 30rpx;
+}
+.bb1 {
+  border-bottom: 1px solid #eaeaea;
+}
+.pt {
+  padding-top: 30rpx;
+}
+.bt1 {
+  border-top: 1px solid #eaeaea;
+}
+.pb {
+  padding-bottom: 20rpx;
+}

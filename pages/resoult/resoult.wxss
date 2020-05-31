@@ -1,0 +1,33 @@
+
+.headimg {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+  margin: 0 auto;
+  padding-top: 80rpx;
+  position: relative;
+}
+.nike {
+  color: #fff;
+  padding: 20rpx 0;
+  text-align: center;
+  color: #666;
+  margin-top: 10rpx;
+}
+.tips {
+  color: #666;
+  margin-top: 10rpx;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+}
+.subscribe {
+  display: block;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 8rpx;
+  background-color: #07c160;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 100rpx;
+}

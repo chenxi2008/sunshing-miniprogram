@@ -1,0 +1,40 @@
+<!--mine.wxml-->
+<view class="container">
+  <view class="banner">
+    <view class="top">
+      <view wx:if="query.type=='padding'">
+        <image src="../../static/img/chenggong.png" class="headimg" />
+        <view class="nike">提交成功等待审核！</view>
+        <view class="subscribe" bindtap="bindSubscribe">订阅消息提醒</view>
+        <view class="tips">
+          订阅后审核成功的消息将发送到您的手机上
+        </view>
+      </view>
+      <view wx:elif="query.type=='confirm'">
+        <image src="../../static/img/chenggong.png" class="headimg" />
+        <view class="nike">预约成功！</view>
+        <view class="tips">
+          您已预约成功，请准时开始哦
+        </view>
+      </view>
+      <view wx:elif="query.type=='success'">
+        <image src="../../static/img/chenggong.png" class="headimg" />
+        <view class="nike">已完成！</view>
+        <view class="tips">
+          您已预约成功，请准时开始哦
+        </view>
+      </view>
+      <view wx:else>
+        <image src="../../static/img/shibai.png" class="headimg" />
+        <view class="nike">预约失败！</view>
+        <view class="tips">
+          失败原因失败原因失败原因失败原因失败原因失
+          败原因失败原因失败原因失败原因失败原因失败
+          原因失败原因失败原因因失败原因失败原因失败
+        </view>
+      </view>
+    </view>
+ 
+      
+  </view>
+</view>
