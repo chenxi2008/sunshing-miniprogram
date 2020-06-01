@@ -39,7 +39,7 @@ Page({
     }
   },
   handleClick: function(e) {
-    let {id} = e.target.dataset
+    let {id} = e.currentTarget.dataset
     if (id) {
       wx.navigateTo({
         url: '/pages/appointment/appointment?type='+ id

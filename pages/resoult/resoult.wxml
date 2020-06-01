@@ -24,13 +24,15 @@
           您已预约成功，请准时开始哦
         </view>
       </view>
+      <view wx:elif="query.type=='cancle'">
+        <image src="../../static/img/shibai.png" class="headimg" />
+        <view class="nike">已取消！</view>
+      </view>
       <view wx:else>
         <image src="../../static/img/shibai.png" class="headimg" />
         <view class="nike">预约失败！</view>
         <view class="tips">
-          失败原因失败原因失败原因失败原因失败原因失
-          败原因失败原因失败原因失败原因失败原因失败
-          原因失败原因失败原因因失败原因失败原因失败
+          
         </view>
       </view>
     </view>

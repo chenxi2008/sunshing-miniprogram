@@ -36,7 +36,8 @@ Page({
     }
   },
   handletoOrder(e) {
-    let {target:{dataset:{id}}} = e
+    let {currentTarget:{dataset:{id}}} = e
+    
     if (id) {
       wx.navigateTo({
         url: '/pages/orderList/orderList?type='+ id

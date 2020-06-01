@@ -8,24 +8,24 @@
       </view>
       <view wx:else>
         <image src="https://pubsto.bxcc.vip/app/static/images/notes/ic_wode_mrtx@2x.png" class="headimg" />
-        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="auth">请点击授权</button>
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="auth">请点击按钮授权</button>
       </view>
     </view>
     <view class="order">
-      <view class="all item border-radius" data-id='1' bindtap="handletoOrder">
+      <view class="all item border-radius" data-id="1" bindtap="handletoOrder">
         <view>我的订单</view> 
         <image src="../../static/img/arrow-right.png" class="arrow" />
       </view>
       <view class="type item">
-        <view data-id='2' bindtap="handletoOrder">
+        <view data-id="2" bindtap="handletoOrder">
           <image src="../../static/img/order-jx.png" />
           <view>进行中</view>
         </view>
-        <view data-id='3' bindtap="handletoOrder">
+        <view data-id="3" bindtap="handletoOrder">
           <image src="../../static/img/order-cg.png" />
           <view>已完成</view>
         </view>
-        <view data-id='4' bindtap="handletoOrder">
+        <view data-id="4" bindtap="handletoOrder">
           <image src="../../static/img/order-sb.png" />
           <view>取消/失败</view>
         </view>

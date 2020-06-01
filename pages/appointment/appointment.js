@@ -68,8 +68,8 @@ Page({
     return app.globalData.userInfo
   },
   changevalue(e) {
-    let {detail, target} = e
-    let type = `userInfo.${target.dataset.id}`
+    let {detail, currentTarget} = e
+    let type = `userInfo.${currentTarget.dataset.id}`
     this.setData({
       [type]: detail.value
     })
@@ -155,8 +155,8 @@ Page({
       showModal: true
     })
   },
-  bindPickerChange: function({detail:{value},target}) {
-    let id = target.dataset.id
+  bindPickerChange: function({detail:{value},currentTarget}) {
+    let id = currentTarget.dataset.id
     this.setData({
       [id]: value
     })

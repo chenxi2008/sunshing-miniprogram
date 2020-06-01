@@ -20,13 +20,13 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   changeTap: function(e) {
-    let {target} = e
+    let {currentTarget} = e
     this.setData({
-      tabIndex: target.dataset.id
+      tabIndex: currentTarget.dataset.id
     })
   },
   handleCancel: function(e) {
-    let {target:{dataset:{id}}} = e
+    let {currentTarget:{dataset:{id}}} = e
     if (id) {
       wx.showModal({
         title: '提示',
@@ -80,7 +80,7 @@ Page({
           this.setData({
             orderList: this.orderList,
             orderList1: this.orderList.filter(item => {
-              return !!~['padding','comfirm'].indexOf(item.state)
+              return !!~['padding','confirm'].indexOf(item.state)
             }),
             orderList2: this.orderList.filter(item => {
               return !!~['success'].indexOf(item.state)
@@ -97,6 +97,12 @@ Page({
           })
         }
       }
+    })
+  },
+  navigetTo(e) {
+    let {currentTarget:{dataset:{id,type}}} = e
+    wx.navigateTo({
+      url: `/pages/resoult/resoult?type=${type}&id=${id}`
     })
   },
   onLoad: function (query) {

@@ -6,6 +6,7 @@ Page({
   data: {
     query: {},
     userInfo: {},
+    orderinfo: {},
     isAuth: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -14,7 +15,9 @@ Page({
     this.setData({
       query: query
     })
-   
+    if (query.id && query.type != 'padding') {
+      this.queryOrder(query.id)
+    }
     if (app.globalData.userInfo) {
       this.setData({
         isAuth: true,
@@ -38,6 +41,22 @@ Page({
         }
       })
     }
+  },
+  //获取订单信息
+  queryOrder(id) {
+    wx.request({
+      url: app.globalData.baseUrl + '/order/getOrderById',
+      data: {
+        id: id
+      },
+      success: res => {
+        if (res.data.code == 200) {
+          this.setData({
+            orderinfo: res.data.data[0]
+          })
+        }
+      }
+    })
   },
   auth (cb) {
     wx.request({

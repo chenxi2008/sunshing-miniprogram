@@ -74,8 +74,8 @@
   padding: 0 30rpx;
 }
 .isnull image {
-  width: 448rpx;
-  height: 568rpx;
+  width: 234rpx;
+  height: 363rpx;
   display: block;
-  margin: 120rpx auto 0 auto;
+  margin: 200rpx auto 0 auto;
 }
