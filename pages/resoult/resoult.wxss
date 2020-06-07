@@ -31,3 +31,18 @@
   text-align: center;
   margin-top: 100rpx;
 }
+.info {
+  color: #666;
+  width: 690rpx;
+  margin-top: 30rpx;
+  border: 1px solid #ccc;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  background: #fff;
+}
+.info > view text:first-child {
+  display: inline-block;
+  width: 160rpx;
+  text-align: right;
+}

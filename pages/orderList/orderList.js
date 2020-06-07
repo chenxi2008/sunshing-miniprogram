@@ -3,7 +3,7 @@
 const app = getApp()
 const obj = {
   'padding': '待审核',
-  'comfirm': '已确认',
+  'confirm': '已确认',
   'success': '已完成',
   'cancel': '已取消',
   'fail': '失败'
@@ -27,31 +27,34 @@ Page({
   },
   handleCancel: function(e) {
     let {currentTarget:{dataset:{id}}} = e
+    console.log(JSON.stringify(e))
     if (id) {
       wx.showModal({
         title: '提示',
         content: '您确认要取消该活动吗?',
         success: res => {
-          wx.request({
-            url: app.globalData.baseUrl+ '/order/changeState',
-            data: {
-              id: id,
-              state: 'cancel',
-            },
-            success: res => {
-              res = res.data
-              wx.showToast({
-                title: res.code == 200 ? '成功' : '失败',
-                icon: res.code == 200 ? 'success' : 'fail',
-                duration: 2000
-              })
-              if (res.code == 200) {
-                setTimeout(() =>{
-                  this.initData()
-                }, 2000)
+          if (!res.cancel) {
+            wx.request({
+              url: app.globalData.baseUrl+ '/order/changeState',
+              data: {
+                id: id,
+                state: 'cancel',
+              },
+              success: res => {
+                res = res.data
+                wx.showToast({
+                  title: res.code == 200 ? '成功' : '失败',
+                  icon: res.code == 200 ? 'success' : 'fail',
+                  duration: 2000
+                })
+                if (res.code == 200) {
+                  setTimeout(() =>{
+                    this.initData()
+                  }, 2000)
+                }
               }
-            }
-          })
+            })
+          }
         }
       })
 
@@ -73,7 +76,7 @@ Page({
             date = date.getDate()
             item.begintime = year+'-'+ month +'-'+ date +'  '+ item.begintime
             item.statename = obj[item.state]
-            item.tempId = item.id == 16 ? '' : item.id
+            item.tempId = item.equipmentid == 16 ? '' : item.equipmentid
             return item
           })
 

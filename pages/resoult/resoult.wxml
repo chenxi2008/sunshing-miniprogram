@@ -2,7 +2,7 @@
 <view class="container">
   <view class="banner">
     <view class="top">
-      <view wx:if="query.type=='padding'">
+      <view wx:if="{{query.type=='padding'}}">
         <image src="../../static/img/chenggong.png" class="headimg" />
         <view class="nike">提交成功等待审核！</view>
         <view class="subscribe" bindtap="bindSubscribe">订阅消息提醒</view>
@@ -10,27 +10,84 @@
           订阅后审核成功的消息将发送到您的手机上
         </view>
       </view>
-      <view wx:elif="query.type=='confirm'">
+      <view wx:elif="{{query.type=='confirm'}}">
         <image src="../../static/img/chenggong.png" class="headimg" />
         <view class="nike">预约成功！</view>
         <view class="tips">
           您已预约成功，请准时开始哦
         </view>
-      </view>
-      <view wx:elif="query.type=='success'">
-        <image src="../../static/img/chenggong.png" class="headimg" />
-        <view class="nike">已完成！</view>
-        <view class="tips">
-          您已预约成功，请准时开始哦
+        <view class="info">
+          <view>
+            <text>姓 名：</text>
+            <text>{{orderinfo.name}}</text>
+          </view>
+          <view>
+            <text>工 号：</text>
+            <text>{{orderinfo.jobnumber}}</text>
+          </view>
+          <view>
+            <text>手机号：</text>
+            <text>{{orderinfo.mobile}}</text>
+          </view>
+          <view>
+            <text>创建时间：</text>
+            <text>{{orderinfo.createtime}}</text>
+           </view>
+          <view>
+            <text>开始时间： </text>
+            <text>{{orderinfo.begintime}}</text>
+          </view>
+          <view>
+            <text>预约项目：</text>
+            <text>{{orderinfo.equipmentname}}</text>
+           </view>
+          <view v-if="{{orderinfo.equipmentname != '电影'}}">
+            <text>器械ID：</text>
+            <text>{{orderinfo.equipmentid}}</text>
+          </view>
         </view>
       </view>
-      <view wx:elif="query.type=='cancle'">
+      <view wx:elif="{{query.type=='success'}}">
+        <image src="../../static/img/chenggong.png" class="headimg" />
+        <view class="nike">订单已完成！</view>
+        <view class="info">
+          <view>
+            <text>姓 名：</text>
+            <text>{{orderinfo.name}}</text>
+          </view>
+          <view>
+            <text>工 号：</text>
+            <text>{{orderinfo.jobnumber}}</text>
+          </view>
+          <view>
+            <text>手机号：</text>
+            <text>{{orderinfo.mobile}}</text>
+          </view>
+          <view>
+            <text>创建时间：</text>
+            <text>{{orderinfo.createtime}}</text>
+           </view>
+          <view>
+            <text>开始时间： </text>
+            <text>{{orderinfo.begintime}}</text>
+          </view>
+          <view>
+            <text>预约项目：</text>
+            <text>{{orderinfo.equipmentname}}</text>
+           </view>
+          <view v-if="{{orderinfo.equipmentname != '电影'}}">
+            <text>器械ID：</text>
+            <text>{{orderinfo.equipmentid}}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:elif="{{query.type=='cancel'}}">
         <image src="../../static/img/shibai.png" class="headimg" />
-        <view class="nike">已取消！</view>
+        <view class="nike">您已取消！</view>
       </view>
       <view wx:else>
         <image src="../../static/img/shibai.png" class="headimg" />
-        <view class="nike">预约失败！</view>
+        <view class="nike">审核失败！</view>
         <view class="tips">
           
         </view>

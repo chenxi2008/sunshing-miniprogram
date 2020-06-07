@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const util = require('../../utils/util.js')
 Page({
   data: {
     query: {},
@@ -15,6 +15,7 @@ Page({
     this.setData({
       query: query
     })
+    console.log(query)
     if (query.id && query.type != 'padding') {
       this.queryOrder(query.id)
     }
@@ -51,6 +52,8 @@ Page({
       },
       success: res => {
         if (res.data.code == 200) {
+          let _res = res.data.data[0]
+          _res.begintime = util.getNextDate(_res.createtime) +" "+ _res.begintime
           this.setData({
             orderinfo: res.data.data[0]
           })

@@ -13,7 +13,7 @@
       <view>活动时间： {{item.begintime}}</view>
       <view>预约状态： {{item.statename}}</view>
       <view wx:if="{{item.state == 'padding' || item.state == 'confirm'}}" >
-        <view class="cancel" data-id="{{item.id}}" bindtap="handleCancel">取消该活动</view>
+        <view class="cancel" data-id="{{item.id}}" catchtap="handleCancel">取消该活动</view>
       </view>
     </view>
     <view class="isnull pt" wx:if="{{orderList.length == 0}}">
@@ -27,7 +27,7 @@
       <view>活动时间： {{item.begintime}}</view>
       <view>预约状态： {{item.statename}}</view>
       <view wx:if="{{item.state == 'padding' || item.state == 'confirm'}}" >
-        <view class="cancel" data-id="{{item.id}}" bindtap="handleCancel">取消该活动</view>
+        <view class="cancel" data-id="{{item.id}}" catchtap="handleCancel">取消该活动</view>
       </view>
     </view>
     <view class="isnull pt" wx:if="{{orderList1.length == 0}}">
@@ -41,7 +41,7 @@
       <view>活动时间： {{item.begintime}}</view>
       <view>预约状态： {{item.statename}}</view>
       <view wx:if="{{item.state == 'padding' || item.state == 'confirm'}}" >
-        <view class="cancel"data-id="{{item.id}}" bindtap="handleCancel">取消该活动</view>
+        <view class="cancel"data-id="{{item.id}}" catchtap="handleCancel">取消该活动</view>
       </view>
     </view>
     <view class="isnull pt" wx:if="{{orderList2.length == 0}}">
@@ -55,7 +55,7 @@
       <view>活动时间： {{item.begintime}}</view>
       <view>预约状态： {{item.statename}}</view>
       <view wx:if="{{item.state == 'padding' || item.state == 'confirm'}}" >
-        <view class="cancel" data-id="{{item.id}}" bindtap="handleCancel">取消该活动</view>
+        <view class="cancel" data-id="{{item.id}}" catchtap="handleCancel">取消该活动</view>
       </view>
     </view>
     <view class="isnull pt" wx:if="{{orderList3.length == 0}}">

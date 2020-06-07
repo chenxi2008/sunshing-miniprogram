@@ -14,6 +14,16 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const getNextDate = time => {
+  if (!time || time.length != 10) return new Error()
+  let date = new Date(new Date(time).getTime()+24*60*60*1000)
+  let year = date.getFullYear()
+  let month = date.getMonth() + 1
+  date = date.getDate()
+  console.log(year+'-'+ month +'-'+ date)
+  return year+'-'+ month +'-'+ date
+}
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getNextDate: getNextDate
 }

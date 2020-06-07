@@ -129,16 +129,18 @@ Page({
           otherinfo: userInfo
         },
         success: res => {
-          console.log(res)
           if (res.data.code == 200) {
             wx.showModal({
               title: '提示',
               content: '提交成功等待人员审核',
               showCancel: false
             })
-            wx.redirectTo({
-              url: '/pages/resoult/resoult?type=padding'
-            })
+            setTimeout(() => {
+              wx.redirectTo({
+                url: '/pages/resoult/resoult?type=padding'
+              })
+            }, 2500)
+           
           } else {
             wx.showModal({
               title: '提示',
@@ -157,8 +159,11 @@ Page({
   },
   bindPickerChange: function({detail:{value},currentTarget}) {
     let id = currentTarget.dataset.id
+    let { type } = this.data
+    console.log(value)
     this.setData({
-      [id]: value
+      [id]: value,
+      type: value == 8 ? '电影' : type //电影
     })
   },
   handleRead() {
